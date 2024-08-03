@@ -100,25 +100,15 @@ void setup() {
 
 void loop() {
 
-  // if(state){
-  //   Serial.println("motor on");
-  //   motor_dir(MOTOR1, CW);
-  //   motor_dir(MOTOR2, CW);
-  //   delay(200);
-  // }else{
-  //   Serial.println("motor off");
-  //   motor_off(MOTOR1);
-  //   motor_off(MOTOR2);
-  //   delay(200);
-  // }
-
-  bool button_pressed = digitalRead(BUTTON);
-
-  if(!button_pressed){
-    Serial.println("poo");
-  }
-
-  if(button_pressed){
-    Serial.println("pee");
+  if(!state){
+    Serial.println("motor on");
+    motor_dir(MOTOR1, CW);
+    motor_dir(MOTOR2, CW);
+    delay(200);
+  }else{
+    Serial.println("motor off");
+    motor_off(MOTOR1);
+    motor_off(MOTOR2);
+    delay(200);
   }
 }
